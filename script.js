@@ -29,6 +29,7 @@ addItem = (input) => {
 
 createDelBttn = (parent) => {
     const bttn = document.createElement("button");
+    bttn.className = "del-bttn";
     const image = document.createElement("i");
     image.className = "fas fa-trash";
     bttn.appendChild(image);
