@@ -16,6 +16,7 @@ body {
 }
 
 
+
 .del-bttn {
     max-width: 2rem;
 }
@@ -67,9 +68,14 @@ input[type="checkbox"] {
     max-width: 2rem;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 500px) {
     .container {
         flex-direction: row;
+    }
+
+    .list {
+        width: 70%;
+        margin: auto;
     }
 
     p {
@@ -78,5 +84,11 @@ input[type="checkbox"] {
 
     li {
         text-align: center;
+    }
+}
+
+@media(min-width: 900px) {
+    .list {
+        width: 60%;
     }
 }
