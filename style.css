@@ -19,6 +19,12 @@ body {
 
 .del-bttn {
     max-width: 2rem;
+    border: none;
+    background-color: white;
+}
+
+i:hover {
+    color: #d9d9d9;
 }
 
 ul {
@@ -53,6 +59,10 @@ li>* {
     border-radius: 0.2rem;
     margin: 0.2rem 1rem;
 
+}
+
+#add-bttn:hover {
+    background-color: #d9d9d9;
 }
 
 #user-input {
