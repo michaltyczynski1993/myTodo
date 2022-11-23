@@ -1,9 +1,13 @@
-var itemsList = [];
+var itemsList = JSON.parse(localStorage.getItem('input')) || [];
 document.getElementById("add-bttn").addEventListener("click", () => {
     const input = document.getElementById("user-input");
     addItem(input.value);
     input.value = "";
 });
+
+window.onload = () => {
+    loadItems();
+}
 
 document.querySelector('#user-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
@@ -24,7 +28,9 @@ addItem = (input) => {
     createCheckbox(item);
     createDelBttn(item);
     todoList.appendChild(item);
-    itemsList.push(item);
+
+    itemsList.push(input);
+
 }
 
 createDelBttn = (parent) => {
@@ -57,4 +63,21 @@ createCheckbox = (parent) => {
         }
     }
     parent.appendChild(checkbox);
+}
+
+loadItems = () => {
+    for (const input of itemsList) {
+        const todoList = document.getElementById("todo-list");
+        const item = document.createElement("li");
+        const itemSpan = document.createElement("p");
+        itemSpan.innerHTML = input;
+
+        item.appendChild(itemSpan);
+        createCheckbox(item);
+        createDelBttn(item);
+        todoList.appendChild(item);
+    }
+}
+saveItems = () => {
+    localStorage.setItem("input", JSON.stringify(itemsList));
 }
