@@ -42,6 +42,12 @@ createDelBttn = (parent) => {
     // bttn onclick function here
     bttn.onclick = () => {
         bttn.parentElement.remove();
+        console.log(bttn.parentElement.innerText)
+
+        const itemIndex = itemsList.indexOf(bttn.parentElement.innerText);
+        if (itemIndex > -1) {
+            itemsList.splice(itemIndex, 1);
+        }
     }
 
     parent.appendChild(bttn);
