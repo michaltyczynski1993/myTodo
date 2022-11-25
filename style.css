@@ -15,8 +15,6 @@ body {
     width: 100%;
 }
 
-
-
 .del-bttn {
     max-width: 2rem;
     border: none;
@@ -49,7 +47,7 @@ li>* {
 }
 
 
-#add-bttn {
+.bttn {
     width: 50%;
     max-width: 8rem;
     padding: 0.4rem 0.2rem;
@@ -61,7 +59,7 @@ li>* {
 
 }
 
-#add-bttn:hover {
+.bttn:hover {
     background-color: #d9d9d9;
 }
 
